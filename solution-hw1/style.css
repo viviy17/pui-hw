@@ -1,34 +1,58 @@
+/* Add format to header */
 h1 {
     text-align: center;
     font-size: 48px;
-    font-family: 'Times New Roman', serif;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 
-section {
-    padding-top: 15px;
-    padding-bottom: 15px;
-    text-align: center;
-    font-size: 14px;
-    font-family: Arial, Helvetica, sans-serif;    
-}
-
+/* Add format to navigation bar */
 nav {
 
     text-align: center;
     font-size: 14px;
     font-family: Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    padding-top:10px;
     padding-bottom: 50px;
 }
 
+/* Add format to photo and product description*/
+.notecard {
+    margin:0px auto 0px auto;
+    width: 250px;
+    height: auto;
+    padding:20px;
+    box-sizing:border-box;
+    font-family: Arial, Helvetica, sans-serif; 
+}
+
+
+/* Add border to pastry photos */
 .border {
     border-style: solid;
     color: black;
   }
 
-  #handmade {
+  
+
+/* Add format to "Our homemade cinnamon  rolls"*/
+#handmade {
     font-size: 18px;
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
+    
+
 }
 
+#bunbun {
+
+    border-style: inset none solid none;
+    padding-top:20px;
+    padding-bottom:20px;
+    
+    }
+
+    a:hover {
+        background-color: yellow;
+      }

@@ -2,19 +2,63 @@
 <html lang="en">
   <meta charset="UTF-8">
   <title>Product Detail</title>
+  <link href="style.css" rel="stylesheet" type="text/css">
   
   <body>
 
-    <h1>Product Detail Page</h1>
+   <!--This part is the same for every webpage, just update <h1>-->
+    <h1>Product Detail</h1>
 
-    <span> 
-      PRODUCTS <br>
-      Cart <br>
-      Original cinnamon roll <br>
-      customize our delicious, hand-made cinnamon roll to your liking! <br>
-      Glazing: <br>
-      Pack size: <br>
-    </span>
+    <div id= "bunbun">
+      <a href="./index.html"> <img src="logo/logo-01.svg" alt="bunbun logo"  width= 250px> </a>
+    </div>
+
+    <nav>
+      <div>
+      <!--Add link to PRODUCTS-->
+      <a href="./index.html" id="nav"> PRODUCTS </a>
+      <br>
+      <br>
+      <!--Add link to SHOPPING-->
+      <a href="./shopping.html" id="nav"> CART </a>
+      </div>
+    </nav>
+   <!--This part is the same for every webpage, just update <h1>-->
+
+    <section class="notecard">
+
+      <a href="./detail.html"> <img src="images/original-cinnamon-roll.jpg" class=border width= 200px alt="original cinnamon roll"> </a>
+      <br>
+      Customize our delicious, hand-made cinnamon roll to your liking!
+      
+
+    </section>
+
+    <form action="/action_page.php">
+      <label for="glazing">Glazing:</label>
+      <select name="glazing" id="glazing">
+        <option value="Keep original">Keep original</option>
+        <option value="Sugar milk">Sugar milk</option>
+        <option value="Double chocolate">Double chocolate</option>
+      </select>
+      <br><br>
+
+      <label for="Pack size">Pack size</label>
+      <select name="Pack size" id="Pack size">
+        <option value="1">1</option>
+        <option value="3">3</option>
+        <option value="6">6</option>
+        <option value="12">12</option>
+      </select>
+      <br><br>
+    </form>
+    
+  <section>
+      $2.49 <!--to bold-->
+  </section>
+
+
+
 
     <p>
         And I can link to <a href="./otherpage.html">other pages.</a>
