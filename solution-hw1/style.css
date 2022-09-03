@@ -45,6 +45,7 @@ nav {
 
 }
 
+/* Add format to bunbun logo */
 #bunbun {
 
     border-style: inset none solid none;
@@ -56,3 +57,41 @@ nav {
     a:hover {
         background-color: yellow;
       }
+
+
+
+
+/*Add format for Shopping Cart items */
+.container {
+    margin:0px auto 0px auto;
+    width: 400px;
+    height: auto;
+    padding:20px;
+    text-align: center;
+    box-sizing:border-box;
+    font-family: Arial, Helvetica, sans-serif; 
+}
+
+/*Add format for button, reference from w3school */
+.button {
+    background-color: yellow;
+    border: solid;
+    color: black;
+    font-size: 16px;
+    padding: 10px 32px;
+    display: inline-block;
+    font-weight: bold;
+  }
+
+/*Add format to total dollar amounts*/
+p{
+
+    font-size: 18px;
+}
+
+/*Add format to border before th total amount in Shopping Cart*/
+.border-total {
+    border-style:solid;
+    margin: 0px auto 0px auto;
+    width: 400px;
+}
