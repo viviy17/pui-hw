@@ -112,7 +112,7 @@ a:hover {
 .dropdown{
     margin:0px 480px 0px 480px;
     font-family: Arial, Helvetica, sans-serif; 
-    padding: 10px;
+    padding: 10px 0px 10px 0px;
 }
 
 
@@ -127,7 +127,7 @@ a:hover {
 }
 
 .container-caption {
-    margin:0px auto 0px auto;
+    margin:0px 480px 0px 480px;
     width: 200px;
     height: auto;
     box-sizing:border-box;
