@@ -31,7 +31,6 @@ a {
   }
 
 /*Add format to hover action on link*/
-
 a:hover {
     background-color: yellow;
     font-weight: bold;
@@ -111,11 +110,9 @@ a:hover {
 
 /*add format to dropdown menu*/
 .dropdown{
-    margin:0px 470px 0px 470px;
-    justify-content:"center";
+    margin:0px 480px 0px 480px;
     font-family: Arial, Helvetica, sans-serif; 
     padding: 10px;
-    text-align: left;
 }
 
 
@@ -130,10 +127,9 @@ a:hover {
 }
 
 .container-caption {
-    margin:flex;
-    width: 225px;
+    margin:0px auto 0px auto;
+    width: 200px;
     height: auto;
-    text-align: left;
     box-sizing:border-box;
     font-family: Arial, Helvetica, sans-serif; 
 }
