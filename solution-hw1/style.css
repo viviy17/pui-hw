@@ -17,6 +17,27 @@ nav {
     padding-bottom: 50px;
 }
 
+/*Add format to total dollar amounts*/
+p{
+
+    font-size: 18px;
+}
+
+
+/*Add format to links- Reference from W3School:https://www.w3schools.com/css/tryit.asp?filename=trycss_link_decoration*/
+a {
+    color: black;
+    text-decoration: none;
+  }
+
+/*Add format to hover action on link*/
+
+a:hover {
+    background-color: yellow;
+    font-weight: bold;
+  }
+
+
 /* Add format to photo and product description*/
 .notecard {
     margin:0px auto 0px auto;
@@ -54,12 +75,6 @@ nav {
     
     }
 
-    a:hover {
-        background-color: yellow;
-      }
-
-
-
 
 /*Add format for Shopping Cart items */
 .container {
@@ -83,15 +98,43 @@ nav {
     font-weight: bold;
   }
 
-/*Add format to total dollar amounts*/
-p{
 
-    font-size: 18px;
-}
 
-/*Add format to border before th total amount in Shopping Cart*/
+/*Add line before the total in Shopping Cart*/
 .border-total {
     border-style:solid;
     margin: 0px auto 0px auto;
     width: 400px;
 }
+
+
+
+/*add format to dropdown menu*/
+.dropdown{
+    display: block;
+    margin: 0px 470px 0px 470px;
+    font-family: Arial, Helvetica, sans-serif; 
+    padding: 10px;
+    text-align: left;
+}
+
+
+.container-details {
+    margin:0px auto 0px auto;
+    width: 500px;
+    height: auto;
+    padding:20px;
+    text-align: center;
+    box-sizing:border-box;
+    font-family: Arial, Helvetica, sans-serif; 
+}
+
+.container-caption {
+    margin:0px auto 0px auto;
+    width: 225px;
+    height: auto;
+    text-align: left;
+    box-sizing:border-box;
+    font-family: Arial, Helvetica, sans-serif; 
+}
+

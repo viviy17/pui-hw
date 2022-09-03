@@ -6,7 +6,7 @@
   
   <body>
 
-   <!--This part is the same for every webpage, just update <h1>-->
+   <!--TOP SECTION: This part is the same for every webpage, just update <h1>-->
     <h1>Product Detail</h1>
 
     <div id= "bunbun">
@@ -23,47 +23,51 @@
       <a href="./shopping.html" id="nav"> CART </a>
       </div>
     </nav>
-   <!--This part is the same for every webpage, just update <h1>-->
+   <!--TOP SECTION: This part is the same for every webpage, just update <h1>-->
 
-    <section class="notecard">
-
-      <a href="./detail.html"> <img src="images/original-cinnamon-roll.jpg" class=border width= 200px alt="original cinnamon roll"> </a>
+    <section class="container-details">
+      <p> Original cinnamon roll</p>
+      <a href="./detail.html"> <img src="images/original-cinnamon-roll.jpg" class=border width= 500px alt="original cinnamon roll"> </a>
       <br>
-      Customize our delicious, hand-made cinnamon roll to your liking!
-      
-
     </section>
 
-    <form action="/action_page.php">
-      <label for="glazing">Glazing:</label>
-      <select name="glazing" id="glazing">
-        <option value="Keep original">Keep original</option>
-        <option value="Sugar milk">Sugar milk</option>
-        <option value="Double chocolate">Double chocolate</option>
-      </select>
-      <br><br>
+    <section class="container-caption">
+      Customize our delicious, hand-made cinnamon roll to your liking!
+    </section>
 
-      <label for="Pack size">Pack size</label>
-      <select name="Pack size" id="Pack size">
-        <option value="1">1</option>
-        <option value="3">3</option>
-        <option value="6">6</option>
-        <option value="12">12</option>
-      </select>
-      <br><br>
-    </form>
+
+
+
+      <!--DROPDOWN MENU- Reference from Stack Overflow: https://stackoverflow.com/questions/56037134/how-to-make-drop-down-menu-reflect-the-form-action-in-php-and-html-->
     
-  <section>
-      $2.49 <!--to bold-->
+      <br>
+      <div class="dropdown">
+        <form action="/action_page.php">
+          <label for="glazing-options">Glazing:</label> <br>
+          <select name="glazing-options" id="glazing-options">
+            <option value="Keep original">Keep original</option>
+            <option value="Sugar milk">Sugar milk</option>
+            <option value="Double chocolate">Double chocolate</option>
+          </select>
+        </form>
+      <br>
+        <form action="/action_page.php"></form>
+          <label for="pack-size">Pack size</label> <br>
+          <select name="pack-size" id="pack-size">
+            <option value="1">1</option>
+            <option value="3">3</option>
+            <option value="6">6</option>
+            <option value="12">12</option>
+          </select>
+        </form>
+      <br>
+
+    </div>
+
+    <!--BOTTOM SECTION: UNIT PRICE AND ADD CART BUTTON-->
+  <section class="container-details">
+      <b> $2.49</b> <div class="button">Add to Cart</div>
   </section>
-
-
-
-
-    <p>
-        And I can link to <a href="./otherpage.html">other pages.</a>
-    </p>
-
 
 
     <a href> </a>
