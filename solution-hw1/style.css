@@ -109,7 +109,7 @@ a:hover {
 
 
 
-/*add format to dropdown menu*/
+/*add format to dropdown menu
 .dropdown{
     display: block;
     margin: 0px 470px 0px 470px;
@@ -117,7 +117,7 @@ a:hover {
     padding: 10px;
     text-align: left;
 }
-
+*/
 
 .container-details {
     margin:0px auto 0px auto;
@@ -138,3 +138,21 @@ a:hover {
     font-family: Arial, Helvetica, sans-serif; 
 }
 
+.dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropbtn {
+    background-color: red;
+    padding: 10px;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display:block;
+  }
