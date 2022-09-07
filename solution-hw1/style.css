@@ -19,9 +19,7 @@ nav {
 
 /*Add format to total dollar amounts*/
 p{
-
     font-size: 18px;
- 
 }
 
 
@@ -41,13 +39,10 @@ div.notecard:hover {
     margin: 0px;
 }
 
-
-
   /*Add bold when hovering on product description*/
   p.bold:hover{
     font-weight: bold;
 }
-
 
 /* Add format to photo and product description*/
 .notecard {
