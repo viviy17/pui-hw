@@ -21,6 +21,7 @@ nav {
 p{
 
     font-size: 18px;
+ 
 }
 
 
@@ -31,18 +32,29 @@ a {
   }
 
 /*Add format to hover action on link*/
-a:hover {
+div.notecard:hover {
     background-color: yellow;
-    font-weight: bold;
   }
+
+.bold{
+    font-size: 16px;
+    margin: 0px;
+}
+
+
+
+  /*Add bold when hovering on product description*/
+  p.bold:hover{
+    font-weight: bold;
+}
 
 
 /* Add format to photo and product description*/
 .notecard {
     margin:0px auto 0px auto;
-    width: 250px;
+    width: 230px;
     height: auto;
-    padding:20px;
+    padding:10px;
     box-sizing:border-box;
     font-family: Arial, Helvetica, sans-serif; 
 }
@@ -54,7 +66,6 @@ a:hover {
     color: black;
   }
 
-  
 
 /* Add format to "Our hand-made cinnamon  rolls"*/
 .handmade {
@@ -68,7 +79,7 @@ a:hover {
 /* Add format to bunbun logo */
 #bunbun {
 
-    border-style: inset none solid none;
+    border-style: none none solid none;
     padding-top:20px;
     padding-bottom:20px;
     
@@ -110,16 +121,23 @@ a:hover {
 
 /*add format to dropdown menu*/
 .dropdown{
-    margin:0px 490px 0px 490px;
+    text-align:center;
+    height: auto;
     font-family: Arial, Helvetica, sans-serif; 
-    padding: 10px 0px 10px 0px;
+    
+}
+
+/*add format to customize to liking in product detail*/
+.customize{
+    text-align: center;
+    margin:0px;
 }
 
 
 .container-details {
     margin:0px auto 0px auto;
-    width: 500px;
-    height: auto;
+    
+   
     padding:20px;
     text-align: center;
     box-sizing:border-box;
