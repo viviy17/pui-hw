@@ -10,10 +10,6 @@ nav {
 }
 
 /*Add format to descriptions*/
-p{
-    font-size: 18px;
-}
-
 
 /*Add format to links- Reference from W3School:https://www.w3schools.com/css/tryit.asp?filename=trycss_link_decoration*/
 a {
@@ -55,18 +51,10 @@ div.notecard:hover {
   }
 
 
-/* Add format to "Our hand-made cinnamon  rolls"*/
-.handmade {
-    font-size: 18px;
-    font-family: Arial, Helvetica, sans-serif;
-
-}
-
 /* Add format to bunbun logo */
 #bunbun {
 
-    padding-top:20px;
-    padding-bottom:20px;
+    padding:20px;
     
     }
 
@@ -143,20 +131,63 @@ div.notecard:hover {
     
 }
 
-
 .container-1 div {
    justify-content: space-between;
 }
 
-
-.container-links {
-    border-style: none none solid none;
-}
-
-
-.nav-content{
-    width: 800px;
+/*This applies flex display for the top section of the gallery page*/
+.container-2{
     display:flex;
 }
 
+/*This aligns the product and cart links to the right*/
+.gallery-links{
+    padding:50px;
+    font-size:20px;
+    text-align:right;
+    border-bottom: solid black;
+    font-family: Arial, Helvetica, sans-serif;
+}
 
+/*This formats the gallery description in the topright section of the gallery page*/
+.gallery-description{
+    padding-top:50px;
+    font-size:24px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/*This gives the top right section width for the gallery page*/
+.gallery-container-right{
+    width:1200px;
+}
+
+/*This formats the product link in the gallery page*/
+.products{
+    background-color:yellow;
+    font-weight: bold;
+}
+
+/*This formats the cart link in the gallery page*/
+.cart{
+    padding-left:100px;
+    padding-right:50px;
+}
+
+
+/*This adds flex display to the details page*/
+.details-container{
+    display:flex;
+}
+
+.details-container-left{
+    background-color:blue;
+    padding-top:300px;
+}
+
+.details-container-right{
+    background-color:green;
+    padding-right:200px;
+    padding-top:300px;
+    width:300px;
+
+}
