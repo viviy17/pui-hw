@@ -35,12 +35,10 @@ div.notecard:hover {
 /* Add format to photo and product description*/
 .notecard {
     margin:0px auto 0px auto;
-    width: 230px;
     height: auto;
     padding:10px;
     box-sizing:border-box;
     font-family: Arial, Helvetica, sans-serif;
-    justify-content: space-between; 
 }
 
 
@@ -100,13 +98,6 @@ div.notecard:hover {
     
 }
 
-/*add format to customize to liking in product detail*/
-.customize{
-    text-align: center;
-    margin:0px;
-}
-
-
 .container-details {
     margin:0px auto 0px auto;
     padding:20px;
@@ -128,12 +119,9 @@ div.notecard:hover {
 /*Create parent flex container*/
 .container-1{
     display:flex;
-    
+    padding-right:100px;
 }
 
-.container-1 div {
-   justify-content: space-between;
-}
 
 /*This applies flex display for the top section of the gallery page*/
 .container-2{
@@ -174,24 +162,44 @@ div.notecard:hover {
 }
 
 
-/*This adds flex display to the details page*/
+/*This formats the product link in the details page*/
+.products-details{
+    background-color:yellow;
+    font-weight: bold;
+}
+
+/*This formats the cart link in the details page*/
+.cart-details{
+    padding-left:100px;
+    padding-right:50px;
+}
+
+
+/*This creats a container for the details section*/
 .details-container{
+    padding:100px;
+}
+
+.details-container-1{
     display:flex;
+    text-align:left;
 }
 
-.details-container-left{
-    background-color:blue;
-    padding-top:300px;
+.details-container-2{
+    display:flex;
+    padding-top:150px;
 }
 
-.details-container-right{
-    background-color:green;
-    padding-right:200px;
-    padding-top:300px;
+.details-description{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 22px;
+    padding-left:50px;
     width:300px;
-
 }
 
+.details-price{
+    padding-right:20px;
+}
 
 /*Shopping Page*/
 
@@ -204,7 +212,6 @@ div.notecard:hover {
     height: 175px;
     display:flex;
 }
-
 
 .shopping-container-2{
     
@@ -222,7 +229,7 @@ div.notecard:hover {
 
 .shopping-price
 {
-    padding-right:100px;
+    padding-right:50px;
     width: 20%;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 24px;
@@ -240,21 +247,22 @@ div.notecard:hover {
 .total{
     font-family: Arial, Helvetica, sans-serif;
     font-size: 24px;
-    width:70%;
+    width:75%;
 }
 
 /*To format price*/
 .total-price{
     font-family: Arial, Helvetica, sans-serif;
     font-size: 30px;
-    width:30%;
+    width:25%;
 }
 
 /*to format the shopping button*/
 .shopping-button{
     padding-top:25px;
-    padding-left:500px;
+    padding-left:550px;
 }
+
 
 /*to format the remove link in shopping page*/
 .remove{
@@ -280,3 +288,5 @@ div.notecard:hover {
     font-weight: bold;
     
 }
+
+
