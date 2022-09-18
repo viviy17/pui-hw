@@ -162,13 +162,13 @@ div.notecard:hover {
 }
 
 /*This formats the product link in the gallery page*/
-.products{
+.products-gallery{
     background-color:yellow;
     font-weight: bold;
 }
 
 /*This formats the cart link in the gallery page*/
-.cart{
+.cart-gallery{
     padding-left:100px;
     padding-right:50px;
 }
@@ -190,4 +190,93 @@ div.notecard:hover {
     padding-top:300px;
     width:300px;
 
+}
+
+
+/*Shopping Page*/
+
+.shopping-container{
+    padding-top:50px;
+    padding-left: 440px;
+}
+
+.shopping-container-1{
+    height: 175px;
+    display:flex;
+}
+
+
+.shopping-container-2{
+    
+    height: 175px;
+    display:flex;
+    border-bottom: solid black;
+}
+
+.shopping-description{
+    padding:20px;
+    width: 80%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+}
+
+.shopping-price
+{
+    padding-right:100px;
+    width: 20%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 24px;
+    text-align:right;
+}
+
+/*To apply flex to the total section*/
+.shopping-total{
+    padding-top:25px;
+    display:flex;
+    padding-left:150px;
+}
+
+/*To format the text "total"*/
+.total{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 24px;
+    width:70%;
+}
+
+/*To format price*/
+.total-price{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    width:30%;
+}
+
+/*to format the shopping button*/
+.shopping-button{
+    padding-top:25px;
+    padding-left:500px;
+}
+
+/*to format the remove link in shopping page*/
+.remove{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10px;
+    font-weight:bold;
+    text-decoration: underline;
+
+
+}
+
+
+
+/*This formats the product link in the shopping page*/
+.products-shopping{
+    padding-left:100px;
+    padding-right:50px;
+}
+
+/*This formats the cart link in the shopping page*/
+.cart-shopping{
+    background-color:yellow;
+    font-weight: bold;
+    
 }
