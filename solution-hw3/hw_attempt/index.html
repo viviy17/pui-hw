@@ -10,20 +10,20 @@
 
   <body>
     <h4>Glazing</h4>
-    <select id="glazingOptions">
+    <select id="glazingOptions" onchange="selectedGlaze();">
     </select>
 
     <h4>Pack size</h4>
-    <select id="packingOptions">
+    <select id="packingOptions" onchange="selectedPack();"">
     </select>
 
 
-    <h4>Total Price is: </h4> 
-    
+    <h4> The total price is: </h4> 
+    <h4 id="totalPrice"></h4>
 
 
 
-  
+
 
   </body>
 </html>
