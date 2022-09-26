@@ -1,29 +1,31 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Detail</title>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <script defer src="app.js"></script>
-  </head>
+  <title>Detail</title>
 
-  <body>
-    <h4>Glazing</h4>
-    <select id="glazingOptions" onchange=calcPrice()>
-    </select>
+  <script defer src="app.js"></script>
+</head>
 
-    <h4>Pack size</h4>
-    <select id="packingOptions">
-    </select>
+<body>
+  <h4>Glazing</h4>
+  <select id="glazingOptions" onchange=calcPrice()>
+  </select>
 
-
-    <h4> The total price is: </h4> 
-    <p id="totalPrice"></p>
+  <h4>Pack size</h4>
+  <select id="packingOptions" onchange=calcPrice()>
+  </select>
 
 
+  <h4> The total price is: </h4>
+  <p id="totalPrice"></p>
 
 
 
-  </body>
+
+
+</body>
+
 </html>

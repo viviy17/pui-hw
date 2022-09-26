@@ -27,21 +27,21 @@ for (const [key, value] of Object.entries(packingOptions)) {
 function calcPrice() {
   let selectGlazingOptions = document.querySelector('#glazingOptions');
   let selectPackingOptions = document.querySelector('#packingOptions');
-
+  let basePrice=2.49
   let glazingPrice = glazingOptions[selectGlazingOptions.value];
   let packSize = packingOptions[selectPackingOptions.value];
-  let finalPrice = (2.49 + glazingPrice) * packSize;
+  let finalPrice = (basePrice + glazingPrice) * packSize;
 
   console.log("glaze price is: ", glazingPrice);
   console.log("pack size is: ", packSize);
   console.log("final price is: ", finalPrice);
-  display(finalPrice).toFixed(2);
+  display(finalPrice);
 }
 
 
 function display(finalPrice) {
   let selectTotalPrice = document.querySelector("#totalPrice");
-  selectTotalPrice.innerHTML = finalPrice;
+  selectTotalPrice.innerHTML = finalPrice.toFixed(2);
   console.log(selectTotalPrice);
 }
 
