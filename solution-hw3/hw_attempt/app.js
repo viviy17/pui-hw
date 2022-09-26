@@ -1,130 +1,43 @@
-/*-------PART 1: CREATING CINNAMON CONSTRUCTOR AND OBJECTS-------*/
+//Dictionary- Create key value pairs 
+const glazingOptions = {"Keep original":0.00, "Sugar milk":0.00, "Vanilla milk":0.50, "Double chocolate":1.50}
+const packingOptions = {1:1, 3:3, 6:5, 12:10}
 
-//Constructor function for cinnamon roll objects
-function cinnamonRoll (glazingOptions, glazingPrice) {
-  this.glazingOptions= glazingOptions;
-  this.glazingPrice=glazingPrice;
-}
-
-// Objects for cinnamon roll glazing options
-const original= new cinnamonRoll ("Keep original", 0.00)
-const sugar= new cinnamonRoll ("Sugar milk", 0.00)
-const vanilla= new cinnamonRoll ("Vanilla milk", 0.50)
-const chocolate= new cinnamonRoll ("Double chocolate", 1.50)
-
-
-/*-------PART 2: CREATE DYNAMIC DROPDOWN MENU FOR GLAZING OPTIONS-------*/
-
-
-// When the page loads, find the select element.
+//Resource: Stack Overflow https://stackoverflow.com/questions/34913675/how-to-iterate-keys-values-in-javascript
+//Create a for loop to update dropdown menu for glazing options.
 let selectGlazingOptions = document.querySelector('#glazingOptions');
 
-// Add original cinnamon roll object to the dropdown menu
-var option = document.createElement('option');
-option.text = original.glazingOptions;
-selectGlazingOptions.add(option);
-
-
-// Add sugar milk cinnamon roll object to the dropdown menu
-var option = document.createElement('option');
-option.text = sugar.glazingOptions;
-selectGlazingOptions.add(option);
-
-// Add vanilla milk cinnamon roll object to the dropdown menu
-
-var option = document.createElement('option');
-option.text= vanilla.glazingOptions;
-selectGlazingOptions.add(option);
-
-
-//Add double chocolate cinnamon roll object to the dropdown menu
-var option= document.createElement('option');
-option.text= chocolate.glazingOptions;
-selectGlazingOptions.add(option);
-
-
-/*-------PART 3: CREATE CONSTRUCTOR AND OBJECTS FOR PACKING OPTIONS-------*/
-
-//Constructor for pack options
-function packingOptions (packSize, priceAdaption){
-  this.packSize=packSize;
-  this.priceAdaption=priceAdaption;
+for (const [key, value] of Object.entries(glazingOptions)) {
+  var opt = document.createElement('option');
+  opt.value=[key];
+  opt.innerText=[key];
+  selectGlazingOptions.appendChild(opt);
 }
 
-// Objects for pack options
-const packOne = new packingOptions (1, 1)
-const packThree = new packingOptions (3, 3)
-const packSix = new packingOptions (6, 5)
-const packTwelve = new packingOptions (12, 10)
-
-
-/*-------PART 4: CREATE DYNAMIC DROPDOWN FOR PACKING OPTIONS-------*/
-
-// When the page loads, find the select element.
+//Create a for loop to update dropdown menu for packing options.
 let selectPackingOptions = document.querySelector('#packingOptions');
 
-// Add packOne object to the dropdown menu
-var option = document.createElement('option');
-option.text = packOne.packSize;
-selectPackingOptions.add(option);
-
-
-// Add packThree object to the dropdown menu
-var option = document.createElement('option');
-option.text = packThree.packSize;
-selectPackingOptions.add(option);
-
-// Add packSix object to the dropdown menu
-
-var option = document.createElement('option');
-option.text = packSix.packSize;
-selectPackingOptions.add(option);
-
-
-//Add packTwelve object to the dropdown menu
-var option = document.createElement('option');
-option.text = packTwelve.packSize;
-selectPackingOptions.add(option);
-
-//JS Tutorial for Beginners resource: https://www.youtube.com/watch?v=kzFJ7St_ma8
-
-
-function selectedGlaze() 
-{
-  var selectedGlaze = document.getElementById("glazingOptions").value;
-  console.log(selectedGlaze, this.glazingPrice);
+for (const [key, value] of Object.entries(packingOptions)) {
+  var opt = document.createElement('option');
+  opt.value=[key];
+  opt.innerText=[key];
+  selectPackingOptions.appendChild(opt);
 }
 
-function selectedPack() 
-{
-  var selectedPack = document.getElementById("packingOptions").value;
-  console.log(selectedPack);
+//Create function to calculate price.
+function calcPrice(){
+  let selectGlazingOptions = document.querySelector('#glazingOptions');
+  let selectPackingOptions = document.querySelector('#packingOptions');
 
-}
+  let glazingPrice= glazingOptions[selectGlazingOptions.value];
+  let packSize= packingOptions [selectPackingOptions.value];
+  let finalPrice= (2.49 + glazingPrice)* packSize;
 
-/*
-function getTotal() 
-
-{
-let arrayPackSize= [1, 3, 6, 12];
-let arrayPriceAdaption= [1, 3, 5, 10];
-let arrayGlazingPrice = [0.00, 0.00, 0.50, 1.50];
-let arrayGlazingOptions = ['Keep original', 'Sugar milk', 'Vanilla milk', 'Chocolate milk'];
-let basePrice=2.49
-
-
-for (i=0; i<arrayGlazingOptions.length; i++){
-
-  if selectedPack == 
-
-
-
+  console.log ("glaze price is: ", glazingPrice);
+  console.log ("pack size is: ", packSize);
+  console.log ("final price is: ", finalPrice);
 }
 
 
-}
-
-*/
 
 
 
@@ -132,106 +45,15 @@ for (i=0; i<arrayGlazingOptions.length; i++){
 
 
 
-/*
-function glazingChange(element) {
-  // get value of selected glazing option
-  const priceChange = element.value;
-  
-// add your code to do update the price ...
-}
-
-
-//Calculate Total Price
-/*
-const arrayGlazingPrice = [0.00, 0.00, 0.50, 1.50];
-const arrayPackingOptions= [1, 3, 5, 10];
-const arrayPackSize= [1, 3, 6, 12];
-const basePrice=2.49
-const arrayGlazingOptions = ['Keep original', 'Sugar milk', 'Vanilla milk', 'Chocolate milk'];
-
-function getTotal() {
 
 
 
-  /*
-
-  for (i=0; i < arrayGlazingOptions.length; i++){
-  if (arrayGlazingOptions[i]=='Keep original') {
-  totalPrice= (basePrice+glazingPrice[i]) * packPrice[i];
-}
-  
-  else if (arrayGlazingOptions[i] == 'Sugar milk') {
-  totalPrice= (basePrice+glazingPrice[i]) * packPrice[i]; 
-}
-
-  else if (arrayGlazingOptions[i] == 'Vanilla milk') {
-  totalPrice= (basePrice+glazingPrice[i]) * packPrice[i];
-}
-
-  else if (arrayGlazingOptions[i] == 'Vanilla milk') {
-  totalPrice= (basePrice+glazingPrice[i]) * packPrice[i]}
-
-  console.log("total price is: " + totalPrice)
-  }
-
-*/
-
-
-/*For Loop calculates total price
-for (i=0; i < glazingOptions.length; i++){
-  if (glazingOptions[i]=='Keep original') {
-  totalPrice= (basePrice[i]+glazingPrice[i]) * packPrice[i];
-}
-  
-  else if (glazingOptions[i] == 'Sugar milk') {
-  totalPrice= (basePrice[i]+glazingPrice[i]) * packPrice[i]; 
-}
-
-  else if (glazingOptions[i] == 'Vanilla milk') {
-  totalPrice= (basePrice[i]+glazingPrice[i]) * packPrice[i];
-}
-
-  else if (glazingOptions[i] == 'Vanilla milk') {
-  totalPrice= (basePrice[i]+glazingPrice[i]) * packPrice[i]}
-}
-*/
-
-
-/* Declare arrays for glazing option, glazing price, pack options, and pack size
 
 
 
-//Create objects for each flavor
-const original = {
-  glazingOptions: "Keep original",
-  glazingPrice: 0.00, 
-  basePrice: 2.49,
-  fullName: function (){
-    return this.glazingOptions;
-  }
-}
 
-document.getElementById("glazingOptions").innerHTML = original.fullName();
 
-/*
-const sugar = {
-  glazingOptions: "Sugar milk",
-  glazingPrice: 0.00, 
-  basePrice: 2.49,
-}
 
-const vanilla = {
-  glazingOptions: "Vanilla milk",
-  glazingPrice: 0.50, 
-  basePrice: 2.49,
-}
-
-const chocolate = {
-  glazingOptions: "Chocolate milk",
-  glazingPrice: 1.50, 
-  basePrice: 2.49,
-}
-*/
 
 
 
