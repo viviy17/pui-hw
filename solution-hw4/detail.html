@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="UTF-8">
+  <title>Product Detail</title>
+  <link href="style.css" rel="stylesheet" type="text/css">
+  <script defer src="app.js"></script>
+
+</head>
+  
+  <body>
+
+    <div class=container-2> <!--This is the parent container-->
+      
+      <div id= "bunbun"> <!--This is the left container-->
+          <a href="./index.html"> <img src="logo/logo-01.svg" alt="bunbun logo"  width= 400> </a>
+      </div> <!--This is the end of the left container-->
+  
+      <div class="gallery-container-right"> <!---This is the right container-->
+        <div class="gallery-links"> 
+          <a href="./index.html" class="products-details"> PRODUCTS </a> 
+          <a href="./shopping.html" class="cart-details"> CART </a> <!--Cart link-->
+        </div>
+          
+        <div class="gallery-description">
+            <p>  Original cinnamon roll </p>
+        </div>
+      </div><!--This is the end of right container-->
+      
+    </div> <!--End of parent container-->
+
+
+    <div class="details-container">
+
+      <div class="details-container-1">
+        <div> 
+          <a href="./detail.html"> <img src="images/original-cinnamon-roll.jpg" class=border width="600" alt="original cinnamon roll"> </a>
+        </div>
+        <div class="details-description">
+          <p>Customize our delicious, hand-made cinnamon roll to your liking!</p>
+          <br>
+          <br>
+          <br>
+          <label for="glazing-options">Glazing:</label> <br>
+                <select id="glazingOptions" onchange=calcPrice()>
+          
+                </select>
+
+          <br>
+          <br>
+          
+
+          <label for="pack-size">Pack size</label> <br>
+              <select id="packingOptions" onchange=calcPrice()>
+              </select>
+  
+
+        <div class="details-container-2">
+          <p id="totalPrice">$2.49</p>
+          <div><button class="button">Add to Cart</button></div>
+        </div>
+      </div>
+    </div>
+
+
+
+ 
+
+
+
+   
+  </body>
+</html>
+
+
+ 
