@@ -299,10 +299,14 @@ div.notecard:hover {
     width:280px;
     height: 40px;
     font-size: 18px;
+    border-width: 3px;
+    border-color: black;
 }
 
 #packingOptions{
     width:280px;
     height: 40px;
     font-size: 18px;
+    border-width: 3px;
+    border-color: black;
 }
