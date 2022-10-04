@@ -1,36 +1,52 @@
- 
-console.log(rolls);
-console.log(rolls["Apple"]);
-console.log(rolls["Apple"].imageFile);
+//These are tests to check objects are functioning. 
+//console.log(rolls);
+//console.log(rolls["Apple"]);
+//console.log(rolls["Apple"].imageFile);
 
-
-document.querySelector(".gallery-description").innerText=rollType+" " +"Cinnamon Roll";
-document.querySelector(".border").src=rolls[rollType].imageFile;
-document.querySelector("#totalPrice").innerText="$"+ rolls[rollType].basePrice;
 
 
 //Parse the URL parameter and store the current roll type as a variable
 const queryString = window.location.search;
 const params = new URLSearchParams(queryString);
-const rollType = params.get("roll");
+const rollType = params.get("rolls");
+
+document.querySelector(".gallery-description").innerText=rollType + " " + "Cinnamon Roll"
+document.querySelector(".border").src=rolls[rollType].imageFile;
+document.querySelector("#totalPrice").innerText="$"+rolls[rollType].basePrice;
 
 
-//Create function to add cart
 
+
+
+
+
+
+//Create function to add cart.
 function addToCart(){
-    console.log("Function is running");
+    console.log("Function is running")
+
+    //Create a class
+    class Roll {
+      constructor(rollType, rollGlazing, packSize, basePrice){
+      this.type= rollType;
+      this.glazing= rollGlazing;
+      this.size= packSize;
+      this.basePrice= basePrice;
+      }
+    }
+
     //Create a roll object
-    let roll= newRoll(rollType,"wsfsdfs","sdfsfsfsf",rolls[rollType].basePrice);
+    let newRoll= newRoll("Dark-Chocolate", "Sugar-milk", 3, 2.49)
+
+    //Create an empty array for cart
+    const cart=[];
+
     //add to cart
-    cart.push(roll1);
+    cart.push(newRoll);
+
+    //console log
     console.log(cart);
-
 }
-
-
-
-
-
 
 //Create dictionaries with key value pairs 
 const glazingOptions = { "Keep original": 0.00, "Sugar milk": 0.00, "Vanilla milk": 0.50, "Double chocolate": 1.50 }
@@ -61,7 +77,6 @@ for (const [key, value] of Object.entries(packingOptions)) {
 function calcPrice() {
   let selectGlazingOptions = document.querySelector('#glazingOptions');
   let selectPackingOptions = document.querySelector('#packingOptions');
-  let basePrice=2.49
   let glazingPrice = glazingOptions[selectGlazingOptions.value];
   let packSize = packingOptions[selectPackingOptions.value];
   let finalPrice = (rolls[rollType].basePrice + glazingPrice) * packSize;
