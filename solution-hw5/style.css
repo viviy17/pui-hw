@@ -1,0 +1,312 @@
+
+/* Add format to navigation bar */
+nav {
+    text-align: center;
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    padding-top:10px;
+    padding-bottom: 50px;
+}
+
+/*Add format to descriptions*/
+
+/*Add format to links- Reference from W3School:https://www.w3schools.com/css/tryit.asp?filename=trycss_link_decoration*/
+a {
+    color: black;
+    text-decoration: none;
+  }
+
+/*Add format to hover action on link*/
+div.notecard:hover {
+    background-color: yellow;
+  }
+
+.bold{
+    font-size: 16px;
+    margin: 0px;
+}
+
+  /*Add bold when hovering on product description*/
+  p.bold:hover{
+    font-weight: bold;
+}
+
+/* Add format to photo and product description*/
+.notecard {
+    margin:0px auto 0px auto;
+    height: auto;
+    padding:10px;
+    box-sizing:border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* Add border to pastry photos */
+.border {
+    border-style: solid;
+    color: black;
+  }
+
+
+/* Add format to bunbun logo */
+#bunbun {
+
+    padding:20px;
+    
+    }
+
+
+/*Add format for Shopping Cart items */
+.container {
+    margin:0px auto 0px auto;
+    width: 400px;
+    height: auto;
+    padding:20px;
+    text-align: center;
+    box-sizing:border-box;
+    font-family: Arial, Helvetica, sans-serif; 
+}
+
+/*Add format for button, reference from w3school */
+.button {
+    background-color: yellow;
+    border: solid;
+    color: black;
+    font-size: 16px;
+    padding: 10px 32px;
+    display: inline-block;
+    font-weight: bold;
+  }
+
+
+
+/*Add line before the total in Shopping Cart*/
+.border-total {
+    border-style:solid;
+    margin: 0px auto 0px auto;
+    width: 400px;
+}
+
+
+
+/*add format to dropdown menu*/
+.dropdown{
+    text-align:center;
+    height: auto;
+    font-family: Arial, Helvetica, sans-serif; 
+    
+}
+
+.container-details {
+    margin:0px auto 0px auto;
+    padding:20px;
+    text-align: center;
+    box-sizing:border-box;
+    font-family: Arial, Helvetica, sans-serif; 
+}
+
+.container-caption {
+    margin:0px auto 0px auto;
+    width: 200px;
+    height: auto;
+    box-sizing:border-box;
+    font-family: Arial, Helvetica, sans-serif; 
+}
+
+/*HW 02*/
+
+/*Create parent flex container*/
+.container-1{
+    display:flex;
+    padding-right:100px;
+}
+
+
+/*This applies flex display for the top section of the gallery page*/
+.container-2{
+    display:flex;
+}
+
+/*This aligns the product and cart links to the right*/
+.gallery-links{
+    padding:50px;
+    font-size:20px;
+    text-align:right;
+    border-bottom: solid black;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/*This formats the gallery description in the topright section of the gallery page*/
+.gallery-description{
+    padding-top:50px;
+    font-size:24px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/*This gives the top right section width for the gallery page*/
+.gallery-container-right{
+    width:1200px;
+}
+
+/*This formats the product link in the gallery page*/
+.products-gallery{
+    background-color:yellow;
+    font-weight: bold;
+}
+
+/*This formats the cart link in the gallery page*/
+.cart-gallery{
+    padding-left:100px;
+    padding-right:50px;
+}
+
+
+/*This formats the product link in the details page*/
+.products-details{
+    background-color:yellow;
+    font-weight: bold;
+}
+
+/*This formats the cart link in the details page*/
+.cart-details{
+    padding-left:100px;
+    padding-right:50px;
+}
+
+
+/*This creats a container for the details section*/
+.details-container{
+    padding:100px;
+}
+
+.details-container-1{
+    display:flex;
+    text-align:left;
+}
+
+.details-container-2{
+    display:flex;
+    padding-top:150px;
+}
+
+.details-description{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 22px;
+    padding-left:50px;
+    width:300px;
+}
+
+.details-price{
+    padding-right:20px;
+}
+
+/*Shopping Page*/
+
+.shopping-container{
+    padding-top:50px;
+    padding-left: 440px;
+}
+
+.shopping-container-1{
+    height: 175px;
+    display:flex;
+}
+
+.shopping-container-2{
+    
+    height: 175px;
+    display:flex;
+    border-bottom: solid black;
+}
+
+.shopping-description{
+    padding:20px;
+    width: 80%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+}
+
+.shopping-price
+{
+    padding-right:50px;
+    width: 20%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 24px;
+    text-align:right;
+}
+
+/*To apply flex to the total section*/
+.shopping-total{
+    padding-top:25px;
+    display:flex;
+    padding-left:150px;
+}
+
+/*To format the text "total"*/
+.total{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 24px;
+    width:75%;
+}
+
+/*To format price*/
+.total-price{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    width:25%;
+}
+
+/*to format the shopping button*/
+.shopping-button{
+    padding-top:25px;
+    padding-left:550px;
+}
+
+
+/*to format the remove link in shopping page*/
+.remove{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10px;
+    font-weight:bold;
+    text-decoration: underline;
+
+
+}
+
+
+
+/*This formats the product link in the shopping page*/
+.products-shopping{
+    padding-left:100px;
+    padding-right:50px;
+}
+
+/*This formats the cart link in the shopping page*/
+.cart-shopping{
+    background-color:yellow;
+    font-weight: bold;
+    
+}
+
+
+#totalPrice {
+    padding-right:60px;
+    font-weight:bold;
+}
+
+#glazingOptions{
+    width:280px;
+    height: 40px;
+    font-size: 18px;
+    border-width: 3px;
+    border-color: black;
+}
+
+#packingOptions{
+    width:280px;
+    height: 40px;
+    font-size: 18px;
+    border-width: 3px;
+    border-color: black;
+}
