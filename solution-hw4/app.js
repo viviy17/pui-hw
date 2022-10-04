@@ -1,9 +1,3 @@
-//These are tests to check objects are functioning. 
-//console.log(rolls);
-//console.log(rolls["Apple"]);
-//console.log(rolls["Apple"].imageFile);
-
-
 
 //Parse the URL parameter and store the current roll type as a variable
 const queryString = window.location.search;
@@ -13,40 +7,6 @@ const rollType = params.get("rolls");
 document.querySelector(".gallery-description").innerText=rollType + " " + "Cinnamon Roll"
 document.querySelector(".border").src=rolls[rollType].imageFile;
 document.querySelector("#totalPrice").innerText="$"+rolls[rollType].basePrice;
-
-
-
-
-
-
-
-
-//Create function to add cart.
-function addToCart(){
-    console.log("Function is running")
-
-    //Create a class
-    class Roll {
-      constructor(rollType, rollGlazing, packSize, basePrice){
-      this.type= rollType;
-      this.glazing= rollGlazing;
-      this.size= packSize;
-      this.basePrice= basePrice;
-      }
-    }
-
-    //Create a roll object
-    let newRoll= newRoll("Dark-Chocolate", "Sugar-milk", 3, 2.49)
-
-    //Create an empty array for cart
-    const cart=[];
-
-    //add to cart
-    cart.push(newRoll);
-
-    //console log
-    console.log(cart);
-}
 
 //Create dictionaries with key value pairs 
 const glazingOptions = { "Keep original": 0.00, "Sugar milk": 0.00, "Vanilla milk": 0.50, "Double chocolate": 1.50 }
@@ -93,9 +53,37 @@ function display(finalPrice) {
 
 
 
+//Create function add to cart.
+function addToCart(){
+
+  //Create a class
+  class Roll {
+    constructor(rollType, rollGlazing, packSize, basePrice){
+    this.type= rollType;
+    this.glazing= rollGlazing;
+    this.size= packSize;
+    this.basePrice= basePrice;
+    }
+  }
+  //Create a roll object
+  let newRoll= new Roll(rollType, selectGlazingOptions.value, selectPackingOptions.value, rolls[rollType].basePrice)
+
+  //Create an empty array for cart
+  const cart=[];
+
+  //add to cart
+  cart.push(newRoll);
+
+  //console log cart
+  console.log("This is the cart", cart);
+}
 
 
 
+//These are tests to check objects are functioning. 
+//console.log(rolls);
+//console.log(rolls["Apple"]);
+//console.log(rolls["Apple"].imageFile);
 
 
 
