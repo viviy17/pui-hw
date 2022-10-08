@@ -9,7 +9,7 @@
   <script defer src="shopping.js" defer></script>
 </head>
 
-<body>
+<body onload=calcPrice()>
 
   <div class=container-2>
     <!--This is the parent container-->
@@ -44,7 +44,8 @@
           <div>
             <a href="./detail.html"> <img class="roll-img" src="images/original-cinnamon-roll.jpg" 
                 width=120 alt="original cinnamon roll"> </a>
-            <p class="remove" onclick = deleteRoll(),calcPrice()>Remove</p>
+            <p class="remove">Remove</p>
+            <!--onclick = deleteRoll(),calcPrice()-->
           </div>
           <div class="shopping-description">
             <span class="roll-name"></span><br>
@@ -53,6 +54,7 @@
           </div>
           <div class="shopping-price">
             <p class="roll-price"> </p>
+            <p class="demo"></p>
           </div>
         </div>
       </div>
@@ -64,7 +66,7 @@
       Total:
     </div>
     <div class="total-price">
-      $29.94
+      
     </div>
   </div>
 
