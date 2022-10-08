@@ -89,7 +89,7 @@ function deleteRoll(rollItem) {
 //Create function to calculate price.
 function calcPrice() {
   const selectTotalPrice = document.querySelector(".total-price");
-  selectTotalPrice.innerHTML = result.toFixed(2);
+  selectTotalPrice.innerHTML = Math.abs(result.toFixed(2)).toFixed(2);
 }
 
 
