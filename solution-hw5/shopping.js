@@ -66,18 +66,10 @@ function deleteRoll () {
 
 //Create function to calculate price.
 function calcPrice() {
-  let selectGlazingOptions = document.querySelector('#glazingOptions');
-  let selectPackingOptions = document.querySelector('#packingOptions');
-  let glazingPrice = glazingOptions[selectGlazingOptions.value];
-  let packSize = packingOptions[selectPackingOptions.value];
-  let finalPrice = 
-  display(finalPrice);
-}
+  const selectTotalPrice = document.querySelector(".total-price");
+  selectTotalPrice.innerHTML = "this is the final price";
 
 
-function display(finalPrice) {
-  let selectTotalPrice = document.querySelector("#totalPrice");
-  selectTotalPrice.innerHTML = '$'+ finalPrice.toFixed(2);
-  console.log(selectTotalPrice);
 }
+
 
