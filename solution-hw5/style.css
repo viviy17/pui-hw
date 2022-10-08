@@ -49,6 +49,14 @@ div.notecard:hover {
   }
 
 
+  /* Add border to pastry photos */
+.roll-img {
+    border-style: solid;
+    color: black;
+  }
+
+
+
 /* Add format to bunbun logo */
 #bunbun {
 
@@ -247,7 +255,10 @@ div.notecard:hover {
 .total{
     font-family: Arial, Helvetica, sans-serif;
     font-size: 24px;
-    width:75%;
+    margin-left:290px;
+    padding-top: 20px;
+    padding-right: 550px;
+    border-top-style: solid;
 }
 
 /*To format price*/
@@ -255,6 +266,8 @@ div.notecard:hover {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 30px;
     width:25%;
+    padding-top: 20px;
+    border-top-style:solid;
 }
 
 /*to format the shopping button*/
