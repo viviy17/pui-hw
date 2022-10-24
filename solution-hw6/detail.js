@@ -43,15 +43,11 @@ function calcPrice() {
   display(finalPrice);
 }
 
-
 function display(finalPrice) {
   let selectTotalPrice = document.querySelector("#totalPrice");
   selectTotalPrice.innerHTML = '$'+ finalPrice.toFixed(2);
   console.log(selectTotalPrice);
 }
-
-
-
 
 //Create function add to cart.
 function addToCart(){
@@ -68,26 +64,58 @@ function addToCart(){
   //Create a roll object
   let newRoll= new Roll(rollType, selectGlazingOptions.value, selectPackingOptions.value, rolls[rollType].basePrice)
 
+  //Create original roll object
   const originalRoll= new Roll("Original", "Sugar Milk", 1, rolls[rollType].basePrice);
-  console.log("Original Roll Object:", originalRoll)
 
   //Create an empty array for cart
   const cart=[];
 
   //add to cart
   cart.push(newRoll);
+  // console.log("This is the cart", cart);
 
-  //console log cart
-  console.log("This is the cart", cart);
+  //stringify the roll array 'cart'
+  const cartString = JSON.stringify(cart);
+
+  //save the string
+  localStorage.setItem('storedRolls', cartString);
+
+  //print stored rolls data
+  console.log("Contents saved to local storage: ", localStorage.getItem('storedRolls'))
+
 }
-
-
 
 //These are tests to check objects are functioning. 
 //console.log(rolls);
 //console.log(rolls["Apple"]);
 //console.log(rolls["Apple"].imageFile);
 
+
+
+
+
+
+
+// function addToCart(){
+//   console.log('Added to cart!')
+//   //constructor(rollType, rollGlazing, packSize, basePrice)
+//   const noteRollType= document.querySelector(".gallery-description");
+//   const rollTypeOptions= noteRollType.value;
+
+//   //select glazing option and assign variable to value
+//   const noteGlazingOptions=document.querySelector('#glazingOptions');
+//   const glazingOptionsText= noteGlazingOptions.value;
+
+//   //select packing option and assign variable to value
+//   const notePackingOptions=document.querySelector('#packingOptions');
+//   const packingOptionsText=notePackingOptions.value;
+
+//   //select baseprice and assign variable to value
+//   const noteBasePrice=document.querySelector('#totalPrice');
+//   const basePriceText=noteBasePrice.value;
+
+//   const roll= new Roll(rollType, glazingOptionsText, packingOptionsText, basePriceText);
+//   console.log("This is the new Roll: ", roll);
 
 
 
