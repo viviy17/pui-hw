@@ -4,9 +4,9 @@ const queryString = window.location.search;
 const params = new URLSearchParams(queryString);
 const rollType = params.get("rolls");
 
-document.querySelector(".gallery-description").innerText=rollType + " " + "Cinnamon Roll"
-document.querySelector(".border").src=rolls[rollType].imageFile;
-document.querySelector("#totalPrice").innerText="$"+rolls[rollType].basePrice;
+document.querySelector(".gallery-description").innerText = rollType + " " + "Cinnamon Roll"
+document.querySelector(".border").src = rolls[rollType].imageFile;
+document.querySelector("#totalPrice").innerText = "$" + rolls[rollType].basePrice;
 
 //Create dictionaries with key value pairs 
 const glazingOptions = { "Keep original": 0.00, "Sugar milk": 0.00, "Vanilla milk": 0.50, "Double chocolate": 1.50 }
@@ -45,30 +45,35 @@ function calcPrice() {
 
 function display(finalPrice) {
   let selectTotalPrice = document.querySelector("#totalPrice");
-  selectTotalPrice.innerHTML = '$'+ finalPrice.toFixed(2);
+  selectTotalPrice.innerHTML = '$' + finalPrice.toFixed(2);
   console.log(selectTotalPrice);
 }
 
+
+class Roll {
+  constructor(rollType, rollGlazing, packSize, basePrice) {
+    this.type = rollType;
+    this.glazing = rollGlazing;
+    this.size = packSize;
+    this.basePrice = basePrice;
+  }
+}
+
+//Create an empty array for cart
+// const cart = []; //check if there's already a cart in the local storage
+
 //Create function add to cart.
-function addToCart(){
+function addToCart() {
+  //?? If null, use second value for the cart variable
+  const cart = JSON.parse(localStorage.getItem('storedRolls')) ?? [];
 
   //Create a class
-  class Roll {
-    constructor(rollType, rollGlazing, packSize, basePrice){
-    this.type= rollType;
-    this.glazing= rollGlazing;
-    this.size= packSize;
-    this.basePrice= basePrice;
-    }
-  }
+
   //Create a roll object
-  let newRoll= new Roll(rollType, selectGlazingOptions.value, selectPackingOptions.value, rolls[rollType].basePrice)
+  let newRoll = new Roll(rollType, selectGlazingOptions.value, selectPackingOptions.value, rolls[rollType].basePrice)
 
   //Create original roll object
-  const originalRoll= new Roll("Original", "Sugar Milk", 1, rolls[rollType].basePrice);
-
-  //Create an empty array for cart
-  const cart=[];
+  const originalRoll = new Roll("Original", "Sugar Milk", 1, rolls[rollType].basePrice);
 
   //add to cart
   cart.push(newRoll);
@@ -85,7 +90,8 @@ function addToCart(){
 
 }
 
-//These are tests to check objects are functioning. 
+
+//These are tests to check objects are functioning.
 //console.log(rolls);
 //console.log(rolls["Apple"]);
 //console.log(rolls["Apple"].imageFile);
