@@ -49,48 +49,60 @@ function display(finalPrice) {
   console.log(selectTotalPrice);
 }
 
+//Create a class in global scope
+class Roll {
+  constructor(rollType, rollGlazing, packSize, basePrice){
+  this.type= rollType;
+  this.glazing= rollGlazing;
+  this.size= packSize;
+  this.basePrice= basePrice;
+  }
+}
+
+//Create an empty array for cart in global scope
+const cart=[];
+
 //Create function add to cart.
 function addToCart(){
 
-  //Create a class
-  class Roll {
-    constructor(rollType, rollGlazing, packSize, basePrice){
-    this.type= rollType;
-    this.glazing= rollGlazing;
-    this.size= packSize;
-    this.basePrice= basePrice;
-    }
-  }
   //Create a roll object
   let newRoll= new Roll(rollType, selectGlazingOptions.value, selectPackingOptions.value, rolls[rollType].basePrice)
 
   //Create original roll object
   const originalRoll= new Roll("Original", "Sugar Milk", 1, rolls[rollType].basePrice);
 
-  //Create an empty array for cart
-  const cart=[];
-
   //add to cart
   cart.push(newRoll);
+  
   // console.log("This is the cart", cart);
-
-  //stringify the roll array 'cart'
-  const cartString = JSON.stringify(cart);
-
-  //save the string
-  localStorage.setItem('storedRolls', cartString);
-
-  //print stored rolls data
-  console.log("Contents saved to local storage: ", localStorage.getItem('storedRolls'))
-
+  saveToLocalStorage();
 }
 
-//These are tests to check objects are functioning. 
-//console.log(rolls);
-//console.log(rolls["Apple"]);
-//console.log(rolls["Apple"].imageFile);
+//Create function save to local storage
+function saveToLocalStorage(){
+   //stringify the roll array 'cart'
+   const cartString = JSON.stringify(cart);
+   //save the string
+   localStorage.setItem('storedRolls', cartString);
+   //print stored rolls data
+   console.log("Contents saved to local storage: ", localStorage.getItem('storedRolls'))
+}
 
+//Accumulate list 
+if (localStorage.getItem('storedRolls')!=null){
+  saveFromLocalStorage();
+}
 
+//Change cart array from string back to array
+// function retrieveFromLocalStorage() {
+//   console.log('this function works')
+  // const cartString = localStorage.getItem('storedRolls');
+  // const rollArray = JSON.parse(cartString);
+  // for (const rollData of rollArray) {
+  //   const roll = addNewNote(noteData.noteImageURL, noteData.noteTitle,
+  //     noteData.noteBody);
+  //   createElement(roll);
+  // }
 
 
 

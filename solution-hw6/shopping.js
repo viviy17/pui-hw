@@ -18,8 +18,8 @@ class Roll {
     btnRemove.addEventListener('click', () => { //add event listener with arrow function
         deleteRoll(this);
     });
-
   }
+
 
   updateElement() {
     const rollNameElement = this.element.querySelector('.roll-name');
@@ -50,10 +50,10 @@ function addNewRoll(rollType, rollGlazing, packSize, packMultiple, basePrice) { 
 }
 
 //Create object for rolls
-addNewRoll("Original", "Sugar Milk", 1, 1, 2.49);
-addNewRoll("Walnut", "Vanilla Milk", 12, 10, 3.99);
-addNewRoll("Raisin", "Sugar Milk", 3, 3, 2.99);
-addNewRoll("Apple", "Original", 3, 3, 3.49);
+// addNewRoll("Original", "Sugar Milk", 1, 1, 2.49);
+// addNewRoll("Walnut", "Vanilla Milk", 12, 10, 3.99);
+// addNewRoll("Raisin", "Sugar Milk", 3, 3, 2.99);
+// addNewRoll("Apple", "Original", 3, 3, 3.49);
 
 //Declare a variable rollContainer pulling div class roll container
 const rollContainer = document.querySelector('.roll-container')
@@ -93,5 +93,17 @@ function calcPrice() {
 }
 
 
+//Change cart array from string back to an array
+function retrieveFromLocalStorage() {
+  const cartString = localStorage.getItem('storedRolls');
+  const rollArray = JSON.parse(cartString);
+  for (const rollData of rollArray) {
+  const roll = new Roll(rollData.rollType, rollData.rollGlazing, rollData.packSize, rollData.basePrice);
+  }
+}
+
+if (localStorage.getItem('storedNotes') != null) {
+  retrieveFromLocalStorage();
+}
 
 
