@@ -4,11 +4,11 @@ class Roll {
     this.type = rollType;
     this.glazing = rollGlazing;
     this.size = packSize;
-    this.multiple= packMultiple;
+    this.multiple = packMultiple;
     this.basePrice = basePrice;
-    this.element= null;
+    this.element = null;
   }
-  
+
   createElement() {
     const template = document.querySelector('#roll-template'); //select template ID in HTML file
     const clone = template.content.cloneNode(true); //copy content inside template using cloneNode method. This does a deep copy, including notecard and child elements.
@@ -16,7 +16,7 @@ class Roll {
 
     const btnRemove = this.element.querySelector('.remove'); //select garbage icon to delete
     btnRemove.addEventListener('click', () => { //add event listener with arrow function
-        deleteRoll(this);
+      deleteRoll(this);
     });
 
   }
@@ -24,14 +24,14 @@ class Roll {
   updateElement() {
     const rollNameElement = this.element.querySelector('.roll-name');
     const rollFlavorElement = this.element.querySelector('.roll-flavor');
-    const rollSizeElement= this.element.querySelector('.roll-size');
-    const rollPriceElement=this.element.querySelector('.roll-price')
-    const subTotal=(this.basePrice*this.multiple).toFixed(2);
-  
+    const rollSizeElement = this.element.querySelector('.roll-size');
+    const rollPriceElement = this.element.querySelector('.roll-price')
+    const subTotal = (this.basePrice * this.multiple).toFixed(2);
+
     rollNameElement.innerText = this.type;
-    rollFlavorElement.innerText= this.glazing;
-    rollSizeElement.innerText= this.size;
-    rollPriceElement.innerText= subTotal;
+    rollFlavorElement.innerText = this.glazing;
+    rollSizeElement.innerText = this.size;
+    rollPriceElement.innerText = subTotal;
 
     const rollImgElement = this.element.querySelector('.roll-img')
     rollImgElement.src = 'images/' + this.type.toLowerCase() + '-cinnamon-roll.jpg'
@@ -60,16 +60,16 @@ const rollContainer = document.querySelector('.roll-container')
 
 //add a call to function createElement
 
-let result=0
+let result = 0
 
 for (const rollItem of cart) {
   rollItem.createElement();
   rollItem.updateElement();
   rollContainer.prepend(rollItem.element); //prepend to rollContainer
-  result=result+(rollItem.multiple*rollItem.basePrice)
+  result = result + (rollItem.multiple * rollItem.basePrice)
   console.log("roll item multiple is: ", rollItem.multiple)
   console.log("roll item base price is: ", rollItem.basePrice)
-  console.log("roll subtotal is: ", rollItem.multiple*rollItem.basePrice)
+  console.log("roll subtotal is: ", rollItem.multiple * rollItem.basePrice)
   console.log(result);
 }
 
@@ -81,9 +81,11 @@ function deleteRoll(rollItem) {
   // console.log(rollItem.element);
   rollItem.element.remove();
   cart.delete(rollItem);
-  result=result-(rollItem.multiple*rollItem.basePrice);
+  result = result - (rollItem.multiple * rollItem.basePrice);
   calcPrice()
 }
+
+//find a bun to see if matches all the attributes of the bun and then remove it
 
 
 //Create function to calculate price.

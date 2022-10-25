@@ -73,6 +73,7 @@ const rollContainer = document.querySelector('.roll-container')
 let result = 0
 
 for (const rollItem of cart) {
+
   rollItem.createElement();
   rollItem.updateElement();
   rollContainer.prepend(rollItem.element); //prepend to rollContainer
@@ -84,23 +85,33 @@ for (const rollItem of cart) {
 }
 
 
+//Create function to calculate price.
+function calcPrice() {
+  console.log("R2", result);
+  const selectTotalPrice = document.querySelector(".total-price");
+  selectTotalPrice.innerHTML = Math.abs(result.toFixed(2)).toFixed(2);
+}
+
 //Create a delete function to remove items in cart
 function deleteRoll(rollItem) {
   // const element= document.querySelector('.shopping-container');
   // console.log(rollItem);
   // console.log(rollItem.element);
+  console.log("RITEM", rollItem)
   rollItem.element.remove();
   cart.delete(rollItem);
-  result = result - (rollItem.multiple * rollItem.basePrice);
-  calcPrice()
+
+  let newResult = 0
+  for (const rollItem of cart) {
+    newResult = newResult + (rollItem.multiple * rollItem.basePrice);
+  }
+  result = newResult
+  // result = result - (rollItem.multiple * rollItem.basePrice);
+  calcPrice();
 }
 
 
-//Create function to calculate price.
-function calcPrice() {
-  const selectTotalPrice = document.querySelector(".total-price");
-  selectTotalPrice.innerHTML = Math.abs(result.toFixed(2)).toFixed(2);
-}
+
 
 calcPrice();
 
