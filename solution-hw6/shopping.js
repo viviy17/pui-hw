@@ -20,7 +20,6 @@ class Roll {
     });
   }
 
-
   updateElement() {
     const rollNameElement = this.element.querySelector('.roll-name');
     const rollFlavorElement = this.element.querySelector('.roll-flavor');
@@ -59,12 +58,6 @@ for (const rollData of shoppingCart) {
   // createElement(notecard);
 }
 
-//Create object for rolls
-// addNewRoll("Original", "Sugar Milk", 1, 1, 2.49);
-// addNewRoll("Walnut", "Vanilla Milk", 12, 10, 3.99);
-// addNewRoll("Raisin", "Sugar Milk", 3, 3, 2.99);
-// addNewRoll("Apple", "Original", 3, 3, 3.49);
-
 //Declare a variable rollContainer pulling div class roll container
 const rollContainer = document.querySelector('.roll-container')
 
@@ -94,11 +87,9 @@ function calcPrice() {
 
 //Create a delete function to remove items in cart
 function deleteRoll(rollItem) {
-  // const element= document.querySelector('.shopping-container');
-  // console.log(rollItem);
-  // console.log(rollItem.element);
-  console.log("RITEM", rollItem)
+  console.log("delete roll here is RITEM", rollItem);
   rollItem.element.remove();
+
   cart.splice(cart.indexOf(rollItem), 1);
 
   let newResult = 0
@@ -107,24 +98,16 @@ function deleteRoll(rollItem) {
     newResult = newResult + (rollItem.multiple * rollItem.basePrice);
   }
   result = newResult
-  // result = result - (rollItem.multiple * rollItem.basePrice);
+
   calcPrice();
+
 }
 
+//stringify the roll array 'cart'
+const cartString = JSON.stringify(cart);
 
-//Change cart array from string back to an array
-function retrieveFromLocalStorage() {
-  const cartString = localStorage.getItem('storedRolls');
-  const rollArray = JSON.parse(cartString);
-  for (const rollData of rollArray) {
-    const roll = new Roll(rollData.rollType, rollData.rollGlazing, rollData.packSize, rollData.basePrice);
-  }
-}
-
-if (localStorage.getItem('storedNotes') != null) {
-  retrieveFromLocalStorage();
-}
-
+//save the string
+localStorage.setItem('Stored rolls', cart);
 
 calcPrice();
 

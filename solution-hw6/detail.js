@@ -50,7 +50,6 @@ function display(finalPrice) {
 }
 
 
-//Create a class in global scope
 class Roll {
   constructor(rollType, rollGlazing, packSize, basePrice) {
     this.type = rollType;
@@ -60,13 +59,15 @@ class Roll {
   }
 }
 
-//Create an empty array for cart in global scope
-const cart = [];
+//Create an empty array for cart
+// const cart = []; //check if there's already a cart in the local storage
 
 //Create function add to cart.
 function addToCart() {
-  //?? If null, use second value for the cart variable
+  //?? If null, use second value for the cart
   const cart = JSON.parse(localStorage.getItem('storedRolls')) ?? [];
+
+  //Create a class
 
   //Create a roll object
   let newRoll = new Roll(rollType, selectGlazingOptions.value, selectPackingOptions.value, rolls[rollType].basePrice)
@@ -74,28 +75,22 @@ function addToCart() {
   //Create original roll object
   const originalRoll = new Roll("Original", "Sugar Milk", 1, rolls[rollType].basePrice);
 
-
   //add to cart
   cart.push(newRoll);
-
   // console.log("This is the cart", cart);
-  saveToLocalStorage();
-}
 
-//Create function save to local storage
-function saveToLocalStorage() {
   //stringify the roll array 'cart'
   const cartString = JSON.stringify(cart);
+
   //save the string
   localStorage.setItem('storedRolls', cartString);
+
   //print stored rolls data
   console.log("Contents saved to local storage: ", localStorage.getItem('storedRolls'))
+
 }
 
-//Accumulate list 
-if (localStorage.getItem('storedRolls') != null) {
-  saveFromLocalStorage();
-}
+
 
 
 
