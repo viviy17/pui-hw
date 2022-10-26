@@ -99,10 +99,11 @@ function deleteRoll(rollItem) {
   // console.log(rollItem.element);
   console.log("RITEM", rollItem)
   rollItem.element.remove();
-  cart.delete(rollItem);
+  cart.splice(cart.indexOf(rollItem), 1);
 
   let newResult = 0
   for (const rollItem of cart) {
+    console.log(rollItem)
     newResult = newResult + (rollItem.multiple * rollItem.basePrice);
   }
   result = newResult
@@ -116,7 +117,7 @@ function retrieveFromLocalStorage() {
   const cartString = localStorage.getItem('storedRolls');
   const rollArray = JSON.parse(cartString);
   for (const rollData of rollArray) {
-  const roll = new Roll(rollData.rollType, rollData.rollGlazing, rollData.packSize, rollData.basePrice);
+    const roll = new Roll(rollData.rollType, rollData.rollGlazing, rollData.packSize, rollData.basePrice);
   }
 }
 
