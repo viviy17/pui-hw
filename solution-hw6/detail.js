@@ -50,6 +50,7 @@ function display(finalPrice) {
 }
 
 
+//Create a class in global scope
 class Roll {
   constructor(rollType, rollGlazing, packSize, basePrice) {
     this.type = rollType;
@@ -59,15 +60,13 @@ class Roll {
   }
 }
 
-//Create an empty array for cart
-// const cart = []; //check if there's already a cart in the local storage
+//Create an empty array for cart in global scope
+const cart = [];
 
 //Create function add to cart.
 function addToCart() {
   //?? If null, use second value for the cart variable
   const cart = JSON.parse(localStorage.getItem('storedRolls')) ?? [];
-
-  //Create a class
 
   //Create a roll object
   let newRoll = new Roll(rollType, selectGlazingOptions.value, selectPackingOptions.value, rolls[rollType].basePrice)
@@ -75,53 +74,29 @@ function addToCart() {
   //Create original roll object
   const originalRoll = new Roll("Original", "Sugar Milk", 1, rolls[rollType].basePrice);
 
+
   //add to cart
   cart.push(newRoll);
+
   // console.log("This is the cart", cart);
-
-  //stringify the roll array 'cart'
-  const cartString = JSON.stringify(cart);
-
-  //save the string
-  localStorage.setItem('storedRolls', cartString);
-
-  //print stored rolls data
-  console.log("Contents saved to local storage: ", localStorage.getItem('storedRolls'))
-
+  saveToLocalStorage();
 }
 
+//Create function save to local storage
+function saveToLocalStorage() {
+  //stringify the roll array 'cart'
+  const cartString = JSON.stringify(cart);
+  //save the string
+  localStorage.setItem('storedRolls', cartString);
+  //print stored rolls data
+  console.log("Contents saved to local storage: ", localStorage.getItem('storedRolls'))
+}
 
-//These are tests to check objects are functioning.
-//console.log(rolls);
-//console.log(rolls["Apple"]);
-//console.log(rolls["Apple"].imageFile);
+//Accumulate list 
+if (localStorage.getItem('storedRolls') != null) {
+  saveFromLocalStorage();
+}
 
-
-
-
-
-
-
-// function addToCart(){
-//   console.log('Added to cart!')
-//   //constructor(rollType, rollGlazing, packSize, basePrice)
-//   const noteRollType= document.querySelector(".gallery-description");
-//   const rollTypeOptions= noteRollType.value;
-
-//   //select glazing option and assign variable to value
-//   const noteGlazingOptions=document.querySelector('#glazingOptions');
-//   const glazingOptionsText= noteGlazingOptions.value;
-
-//   //select packing option and assign variable to value
-//   const notePackingOptions=document.querySelector('#packingOptions');
-//   const packingOptionsText=notePackingOptions.value;
-
-//   //select baseprice and assign variable to value
-//   const noteBasePrice=document.querySelector('#totalPrice');
-//   const basePriceText=noteBasePrice.value;
-
-//   const roll= new Roll(rollType, glazingOptionsText, packingOptionsText, basePriceText);
-//   console.log("This is the new Roll: ", roll);
 
 
 

@@ -18,8 +18,8 @@ class Roll {
     btnRemove.addEventListener('click', () => { //add event listener with arrow function
       deleteRoll(this);
     });
-
   }
+
 
   updateElement() {
     const rollNameElement = this.element.querySelector('.roll-name');
@@ -111,6 +111,18 @@ function deleteRoll(rollItem) {
 }
 
 
+//Change cart array from string back to an array
+function retrieveFromLocalStorage() {
+  const cartString = localStorage.getItem('storedRolls');
+  const rollArray = JSON.parse(cartString);
+  for (const rollData of rollArray) {
+  const roll = new Roll(rollData.rollType, rollData.rollGlazing, rollData.packSize, rollData.basePrice);
+  }
+}
+
+if (localStorage.getItem('storedNotes') != null) {
+  retrieveFromLocalStorage();
+}
 
 
 calcPrice();
