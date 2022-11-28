@@ -66,3 +66,18 @@ h2{
 .resume {
     padding-left: 300px;
 }
+
+.majiVideo{
+    padding-left: 250px; 
+}
+
+.majiHowMightWe{
+    padding-left: 220px;
+    font-size: 24px;
+}
+
+.TLDR{
+    padding-left: 220px;
+    font-size: 18px;
+    width: 1000px;
+}

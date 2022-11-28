@@ -20,10 +20,6 @@ $(document).ready(function(){
 })
 
 
-//Bolds the menu options when mouse hovers over it
-$(document).ready(function(){
-    $(".introduction").toggle(1000).toggle(1000);
-})
 
 
 //Bolds the menu options when mouse hovers over it
