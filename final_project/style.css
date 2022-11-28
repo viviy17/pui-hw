@@ -1,9 +1,8 @@
 
-.subtitle{
-    font-family: sans-serif;
-    font-size: 18px;
-    text-align: center; 
+.aboutVideo{
+    padding-left: 250px; 
 }
+
 
 .navBar{
     display: flex;
@@ -15,9 +14,55 @@
     padding-right: 20px;
 }
 
+a{ 
+    color:rgb(239, 110, 131);
+}
+
 .menuHeader{
     font-family: Verdana, sans-serif;
     font-size: 36px;
-    padding-right: 600px;
+    padding-right: 850px;
     margin: 40px;
+}
+
+body{
+
+    background-color: whitesmoke;
+    color:rgb(239, 110, 131);
+}
+
+.project{
+    display:flex;
+}
+
+.projectVideo{
+ margin: 50px;
+}
+
+
+h1{
+    font-size: 48px;
+}
+
+
+h2{
+    font-family: Georgia;
+    padding-top: 80px;
+}
+
+.projectDescription{
+    font-family: Verdana;
+    padding-right: 850px;
+}
+
+.introduction{
+    margin: 50px;
+}
+
+.introSubHeader{
+    font-size:24px;
+}
+
+.resume {
+    padding-left: 300px;
 }
