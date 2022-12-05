@@ -1,0 +1,138 @@
+
+.aboutVideo{
+    padding-left: 250px; 
+}
+
+
+.navBar{
+    display: flex;
+}
+
+.menuOption{
+    font-family: Arial, sans-serif;
+    padding-top:110px;
+    padding-right: 20px;
+}
+
+.header{
+    color:purple;
+}
+
+a{ 
+    color:purple;
+}
+
+.menuHeader{
+    font-family: Verdana, sans-serif;
+    font-size: 36px;
+    padding-right: 850px;
+    margin: 40px;
+    color: deeppink;
+}
+
+body{
+    background-color: whitesmoke;
+}
+
+.project{
+    display:flex;
+}
+
+.projectVideo{
+ margin: 50px;
+}
+
+
+h1{
+    font-size: 48px;
+}
+
+
+h2{
+    font-family: Georgia;
+    padding-top: 80px;
+    color: purple;
+}
+
+.projectDescription{
+    font-family: Verdana;
+    padding-right: 850px;
+}
+
+.introduction{
+    margin: 50px;
+}
+
+.introSubHeader{
+    font-size:20px;
+    color: rgb(226, 52, 145)
+}
+
+.introSubHeader2{
+    font-size: 16px;
+    color: rgb(77, 74, 74);
+    width: 1000px;
+}
+
+.resume {
+    padding-left: 300px;
+}
+
+.majiVideo{
+    padding-left: 80px; 
+}
+
+.majiHowMightWe{
+    padding-left: 220px;
+    font-size: 24px;
+}
+
+.TLDR{
+    padding-left: 220px;
+    font-size: 18px;
+    width: 1000px;
+}
+
+
+
+.paragraph{
+    width:800px;
+    font-size: 16px;
+    font-family: Verdana;
+    text-align:left;
+    padding-left: 80px;
+    
+}
+
+.title{
+    padding-left: 40px;
+    color: purple;
+}
+
+.section {
+
+    display: flex;
+
+}
+
+
+.image{
+    padding-left: 80px;
+}
+
+.lofiVideo{
+    padding-left: 80px;
+}
+
+b {
+    color: purple;
+}
+
+p {
+    font-family: Verdana;
+}
+
+.aboutMePargraph{
+    padding-left:250px;
+    width: 800px;
+}
