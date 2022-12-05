@@ -136,3 +136,9 @@ p {
     padding-left:250px;
     width: 800px;
 }
+
+.list{
+    padding-left:120px;
+    width: 800px;
+    font-family: verdana;
+}
