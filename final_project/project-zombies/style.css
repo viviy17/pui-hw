@@ -5,12 +5,14 @@
 
 .navBar {
     display: flex;
+    flex-wrap: wrap;
 }
 
 .menuOption {
     font-family: Arial, sans-serif;
     padding-top: 110px;
     padding-right: 20px;
+    padding-left: 50px;
 }
 
 .header {

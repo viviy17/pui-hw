@@ -15,6 +15,7 @@
 
 .header {
     color: purple;
+    width: auto;
 }
 
 a {
@@ -35,10 +36,13 @@ body {
 
 .project {
     display: flex;
+    flex-wrap: wrap;
+    margin: 40px;
 }
 
 .projectVideo {
-    margin: 50px;
+    flex-wrap: wrap;
+    
 }
 
 
@@ -64,13 +68,15 @@ h2 {
 
 .introSubHeader {
     font-size: 20px;
-    color: rgb(226, 52, 145)
+    width: auto;
+    color: rgb(226, 52, 145);
+   
 }
 
 .introSubHeader2 {
     font-size: 16px;
     color: rgb(77, 74, 74);
-    width: 1000px;
+    width: auto;
 }
 
 .resume {
