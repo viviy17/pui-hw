@@ -9,6 +9,19 @@ $(document).ready(function () {
   });
 });
 
+//JQUERY toggle effect for the content in the website.
+$(document).ready(function(){
+  $(".title").fadeOut(10).delay(1000).fadeIn(2000);
+})
+
+$(document).ready(function(){
+  $(".image").hide(1000).show(1000);
+})
+   
+$(document).ready(function(){
+  $(".paragraph").hide(1000).show(1000);
+})
+    
 
 
     

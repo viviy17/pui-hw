@@ -41,6 +41,7 @@ body {
 }
 
 .projectVideo {
+    margin: 10px;
     flex-wrap: wrap;
     
 }
