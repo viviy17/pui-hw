@@ -14,14 +14,42 @@
 </head>
 
 <body>
-  <div class="navBar">
+
+  <!-- This is the web responsive navigation bar from CSS Bootstrap -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Vivian Young</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/final_project/projects/projects.html">Projects</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/final_project/about/about.html">About</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="/final_project/resume/resume.html">Resume</a>
+          </li>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Bring photos underneath text, remove flex attribute -->
+  <!-- Organize in order for CSS, only label if it's not self explanatory, small comment on top of every file -->
+  <!-- For HTML, don't recommend have many comments, use to define section of document -->
+  <!-- <div class="navBar">
     <div class="menuHeader">
       <h1> Dinner with Zombies </h1>
     </div>
     <div class="menuOption"> <a href="/final_project/projects/projects.html"> Projects </a></div>
     <div class="menuOption"> <a href="/final_project/about/about.html"> My Story</a> </div>
     <div class="menuOption"> <a href="/final_project/resume/resume.html">Resume </a> </div>
-  </div>
+  </div> -->
 
 
   <h2 class="title">TLDR Overview</h2>
@@ -170,14 +198,9 @@
       <div class="lofiVideo">
         <video width="500" height="500" controls>
           <source src="./videos/zombie_lofi.mp4" type="video/mp4">
-          <track
-          label="English"
-          kind="subtitles"
-          srclang="en"
-          src="./videos/lofi_zombie.en.vtt"
-          default />
+          <track label="English" kind="subtitles" srclang="en" src="./videos/lofi_zombie.en.vtt" default />
         </video>
-        <track src=""> 
+        <track src="">
       </div>
       <br>
       <br>
